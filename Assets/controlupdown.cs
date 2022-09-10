@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class controlupdown : MonoBehaviour
 {
+
+
     // Start is called before the first frame update
     void Start()
     {
