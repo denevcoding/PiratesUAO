@@ -6,6 +6,7 @@ public class CharacterController : MonoBehaviour
 {
     CapsuleCollider2D capsuleColldier;
     Rigidbody2D rigibBodie;
+    Animator animController;
 
     LayerMask obstacleMask;
 
@@ -17,6 +18,7 @@ public class CharacterController : MonoBehaviour
     {
         capsuleColldier = GetComponent<CapsuleCollider2D>();
         rigibBodie = GetComponent<Rigidbody2D>();
+        animController = GetComponent<Animator>();
 
         obstacleMask = LayerMask.GetMask("Obstacle");
     }
@@ -47,12 +49,15 @@ public class CharacterController : MonoBehaviour
         if (hit)
         {
             isGrounded = true;
+            animController.SetBool("Jump", false);
         }
         else
         {
             isGrounded = false;
         }
-        
+
+
+        animController.SetBool("isGrounded", isGrounded);
     }
 
 
@@ -63,6 +68,9 @@ public class CharacterController : MonoBehaviour
             if (isGrounded == true)
             {
                 rigibBodie.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                animController.SetBool("Jump", true);
+               
+
             }
         }
     }
