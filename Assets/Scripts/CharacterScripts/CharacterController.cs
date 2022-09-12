@@ -36,26 +36,30 @@ public class CharacterController : MonoBehaviour
         Jump();
     }
 
+    private void FixedUpdate()
+    {
+        if (animController.GetBool("jumping"))
+        {
+            if (rigibBodie.velocity.y <= -1)
+            {
+                animController.SetBool("jumping", false);
+            }
+        }
+            
+    }
+
 
     void IsGrounded()
     {
-        Vector2 rayStartPos = capsuleColldier.bounds.extents;
-
         float dist = capsuleColldier.bounds.extents.y;
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, dist + 0.05f, obstacleMask);
         Debug.DrawRay(transform.position, Vector2.down  * (dist + 1f), Color.cyan);
 
-        if (hit)
-        {
-            isGrounded = true;
-            animController.SetBool("Jump", false);
-        }
-        else
-        {
+        if (hit)        
+            isGrounded = true;       
+        else        
             isGrounded = false;
-        }
-
 
         animController.SetBool("isGrounded", isGrounded);
     }
@@ -68,9 +72,7 @@ public class CharacterController : MonoBehaviour
             if (isGrounded == true)
             {
                 rigibBodie.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-                animController.SetBool("Jump", true);
-               
-
+                animController.SetBool("jumping", true);
             }
         }
     }

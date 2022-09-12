@@ -65,7 +65,27 @@ MonoBehaviour:
     the 2D Renderer in Universal RP.
   preview: {fileID: -3604256930052969394}
   dependencies:
-  - dependency: {fileID: 2800000, guid: b3ab972b21db85d48ade9657efdd4771, type: 3}
-    instantiationMode: 1
+  - dependency: {fileID: 2800000, guid: d4e003c1cecc148f788617bf6a5441f1, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: fbaeef0c1f9a540f19367e2faccac005, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 9100000, guid: c27c92fbe8f7d84479d4981ab27dbea8, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 7703274578903819961, guid: d38ca2df7ed9c5c43abead0e5f18d6ad, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: fe0e2ba95ba77493c973bfad8f45e542, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 6828368384468809142, guid: cb8d1873b5fb745d08cbb6fbea3df28c, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 7400000, guid: f3a823711cac348fa975551b2281fdd6, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 7400000, guid: 8cc0e4be0c5274774b712190bbe6d780, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 1167285468979014292, guid: 72a7b51d47d4544e58625bddcc6a105e, type: 3}
+    instantiationMode: 0
   templatePipeline: {fileID: 0}
   addToDefaults: 1
