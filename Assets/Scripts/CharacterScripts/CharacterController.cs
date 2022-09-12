@@ -38,29 +38,21 @@ public class CharacterController : MonoBehaviour
         Jump();
 
         //sliding prototype
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(1))
         {
-            animController.SetBool("sliding", true);
-
-            Vector2 size = capsuleColldier.size;
-            size.y = 1.26f;
-            capsuleColldier.size = new Vector3(size.x, size.y);
+            if (isGrounded == true)
+            {
+                animController.SetBool("sliding", true);
+                Vector2 size = capsuleColldier.size;
+                size.y = 1.26f;
+                capsuleColldier.size = new Vector3(size.x, size.y);
+            }
         }
         else
         {
-            animController.SetBool("sliding", false);
+            animController.SetBool("sliding", false);           
             capsuleColldier.size = colliderDefaultSize;
         }
-
-        //if (Input.GetMouseButton(1))
-        //{
-        //    Debug.Log("Pressed right click.");
-        //}
-
-        //if (Input.GetMouseButton(2))
-        //{
-        //    Debug.Log("Pressed middle click.");
-        //}
     }
 
     private void FixedUpdate()
@@ -69,7 +61,9 @@ public class CharacterController : MonoBehaviour
         {
             if (rigibBodie.velocity.y <= -1)
             {
+                capsuleColldier.size = colliderDefaultSize;
                 animController.SetBool("jumping", false);
+                animController.SetBool("sliding", false);                
             }
         }
             
@@ -81,7 +75,7 @@ public class CharacterController : MonoBehaviour
         float dist = capsuleColldier.bounds.extents.y;
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, dist + 0.05f, obstacleMask);
-        Debug.DrawRay(transform.position, Vector2.down  * (dist + 1f), Color.cyan);
+        Debug.DrawRay(transform.position, Vector2.down  * (dist + 0.05f), Color.cyan);
 
         if (hit)        
             isGrounded = true;       
@@ -94,10 +88,11 @@ public class CharacterController : MonoBehaviour
 
     public void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0))
         {
             if (isGrounded == true)
             {
+                capsuleColldier.size = colliderDefaultSize;
                 rigibBodie.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 animController.SetBool("jumping", true);
             }
