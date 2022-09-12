@@ -14,6 +14,8 @@ public class CharacterController : MonoBehaviour
 
     public float jumpForce = 10f;
 
+    Vector2 colliderDefaultSize = Vector2.zero;
+
     private void Awake()
     {
         capsuleColldier = GetComponent<CapsuleCollider2D>();
@@ -26,7 +28,7 @@ public class CharacterController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        colliderDefaultSize = capsuleColldier.size;
     }
 
     // Update is called once per frame
@@ -34,6 +36,31 @@ public class CharacterController : MonoBehaviour
     {
         IsGrounded();
         Jump();
+
+        //sliding prototype
+        if (Input.GetMouseButton(0))
+        {
+            animController.SetBool("sliding", true);
+
+            Vector2 size = capsuleColldier.size;
+            size.y = 1.26f;
+            capsuleColldier.size = new Vector3(size.x, size.y);
+        }
+        else
+        {
+            animController.SetBool("sliding", false);
+            capsuleColldier.size = colliderDefaultSize;
+        }
+
+        //if (Input.GetMouseButton(1))
+        //{
+        //    Debug.Log("Pressed right click.");
+        //}
+
+        //if (Input.GetMouseButton(2))
+        //{
+        //    Debug.Log("Pressed middle click.");
+        //}
     }
 
     private void FixedUpdate()
