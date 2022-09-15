@@ -74,4 +74,25 @@ public class CharacterController : MonoBehaviour
             }
         }
     }
+
+    public void Runningninja()
+
+    {
+        if (Input.GetKeyDown(KeyCode.D))
+
+
+            if (Input.GetKeyDown(KeyCode.A))
+
+                
+
+        {
+            if (isGrounded == true)
+
+            {
+                animController.SetBool("Runningninja", true);
+
+
+            }
+        }
+    }
 }
