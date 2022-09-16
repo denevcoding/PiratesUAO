@@ -38,9 +38,7 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        IsGrounded();
-
-       
+        IsGrounded();       
 
         Jump();
 
@@ -57,7 +55,9 @@ public class CharacterController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move();
+        //Move();
+
+        MoveVelocity();
 
         if (animController.GetBool("jumping"))
         {
@@ -82,6 +82,16 @@ public class CharacterController : MonoBehaviour
         {
             rigibBodie.AddForce(rigibBodie.velocity * -1, ForceMode2D.Force);
         }
+    }
+
+    public void MoveVelocity()
+    {
+    
+        rigibBodie.velocity = new Vector2(moveSpeed , rigibBodie.velocity.y);
+        //if (rigibBodie.velocity.x > maxSpeed)
+        //{
+        //    rigibBodie.velocity = maxSpeed;
+        //}
     }
 
 
@@ -109,7 +119,9 @@ public class CharacterController : MonoBehaviour
             if (isGrounded == true)
             {
                 capsuleColldier.size = colliderDefaultSize;
+
                 rigibBodie.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                //rigibBodie.velocity = new Vector2(rigibBodie.velocity.x, jumpForce);
                 animController.SetBool("jumping", true);
 
             }
