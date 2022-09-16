@@ -16,6 +16,10 @@ public class CharacterController : MonoBehaviour
 
     Vector2 colliderDefaultSize = Vector2.zero;
 
+    public float Accel;
+    public float moveSpeed;
+    public float maxSpeed;
+
     private void Awake()
     {
         capsuleColldier = GetComponent<CapsuleCollider2D>();
@@ -35,28 +39,26 @@ public class CharacterController : MonoBehaviour
     void Update()
     {
         IsGrounded();
+
+       
+
         Jump();
 
-        //sliding prototype
-        if (Input.GetMouseButton(1))
-        {
-            if (isGrounded == true)
-            {
-                animController.SetBool("sliding", true);
-                Vector2 size = capsuleColldier.size;
-                size.y = 1.26f;
-                capsuleColldier.size = new Vector3(size.x, size.y);
-            }
-        }
-        else
-        {
-            animController.SetBool("sliding", false);           
-            capsuleColldier.size = colliderDefaultSize;
-        }
+        Slide();
+
+
+
+
+        if (isGrounded == false)
+            animController.SetBool("sliding", false);
+        
+        
     }
 
     private void FixedUpdate()
     {
+        Move();
+
         if (animController.GetBool("jumping"))
         {
             if (rigibBodie.velocity.y <= -1)
@@ -66,10 +68,24 @@ public class CharacterController : MonoBehaviour
                 animController.SetBool("sliding", false);                
             }
         }
-            
+
+        Debug.Log(rigibBodie.velocity.magnitude);
     }
 
 
+
+    private void Move()
+    {
+        rigibBodie.AddForce(Vector2.right * moveSpeed , ForceMode2D.Force);
+
+        if (rigibBodie.velocity.x > maxSpeed)
+        {
+            rigibBodie.AddForce(rigibBodie.velocity * -1, ForceMode2D.Force);
+        }
+    }
+
+
+    //Chek if pirate character is touching the floor
     void IsGrounded()
     {
         float dist = capsuleColldier.bounds.extents.y;
@@ -95,7 +111,31 @@ public class CharacterController : MonoBehaviour
                 capsuleColldier.size = colliderDefaultSize;
                 rigibBodie.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 animController.SetBool("jumping", true);
+
             }
+        }
+    }
+
+
+
+
+    public void Slide()
+    {
+        //sliding prototype
+        if (Input.GetMouseButton(1))
+        {
+            if (isGrounded == true)
+            {
+                animController.SetBool("sliding", true);
+                Vector2 size = capsuleColldier.size;
+                size.y = 1.26f;
+                capsuleColldier.size = new Vector3(size.x, size.y);
+            }
+        }
+        else
+        {
+            animController.SetBool("sliding", false);           
+            capsuleColldier.size = colliderDefaultSize;
         }
     }
 }
