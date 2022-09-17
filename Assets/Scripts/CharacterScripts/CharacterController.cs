@@ -2,8 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PirateState
+{
+    Alive,
+    Dead,
+
+}
+
 public class CharacterController : MonoBehaviour
 {
+    public PirateState state;
+
     CapsuleCollider2D capsuleColldier;
     Rigidbody2D rigibBodie;
     Animator animController;
@@ -38,18 +47,17 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        IsGrounded();       
+        IsGrounded();
 
-        Jump();
+        if (state == PirateState.Alive)
+        {
+            Jump();
 
-        Slide();
+            Slide();
 
-
-
-
-        if (isGrounded == false)
-            animController.SetBool("sliding", false);
-        
+            if (isGrounded == false)
+                animController.SetBool("sliding", false);
+        }
         
     }
 
@@ -57,19 +65,24 @@ public class CharacterController : MonoBehaviour
     {
         //Move();
 
-        MoveVelocity();
-
-        if (animController.GetBool("jumping"))
+        if (state == PirateState.Alive)
         {
-            if (rigibBodie.velocity.y <= -1)
+            MoveVelocity();
+
+            if (animController.GetBool("jumping"))
             {
-                capsuleColldier.size = colliderDefaultSize;
-                animController.SetBool("jumping", false);
-                animController.SetBool("sliding", false);                
+                if (rigibBodie.velocity.y <= -1)
+                {
+                    capsuleColldier.size = colliderDefaultSize;
+                    animController.SetBool("jumping", false);
+                    animController.SetBool("sliding", false);
+                }
             }
+
+            //Debug.Log(rigibBodie.velocity.magnitude);
         }
 
-        //Debug.Log(rigibBodie.velocity.magnitude);
+
     }
 
 
@@ -150,4 +163,15 @@ public class CharacterController : MonoBehaviour
             capsuleColldier.size = colliderDefaultSize;
         }
     }
+
+
+    public void Dead()
+    {
+        state = PirateState.Dead;
+        animController.SetBool("Dead", true);
+
+    }
+
+
+
 }
