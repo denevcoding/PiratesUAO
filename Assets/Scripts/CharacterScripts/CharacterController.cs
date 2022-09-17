@@ -69,7 +69,7 @@ public class CharacterController : MonoBehaviour
             }
         }
 
-        Debug.Log(rigibBodie.velocity.magnitude);
+        //Debug.Log(rigibBodie.velocity.magnitude);
     }
 
 
