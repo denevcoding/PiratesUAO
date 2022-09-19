@@ -41,6 +41,8 @@ public class CharacterController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Make the game run as fast as possible
+        Application.targetFrameRate = 60;
         colliderDefaultSize = capsuleColldier.size;
     }
 
@@ -57,6 +59,9 @@ public class CharacterController : MonoBehaviour
 
             if (isGrounded == false)
                 animController.SetBool("sliding", false);
+        }else if (state == PirateState.Dead)
+        {
+            animController.SetBool("Dead", true);
         }
         
     }

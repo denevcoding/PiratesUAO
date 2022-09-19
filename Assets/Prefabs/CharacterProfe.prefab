@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7703274578903819962}
   - component: {fileID: 365981714623254225}
   - component: {fileID: 1799026408777667004}
+  - component: {fileID: 6338333405521370803}
   m_Layer: 7
   m_Name: CharacterProfe
   m_TagString: Untagged
@@ -157,5 +158,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ca9908cf33a640ef96d7b57cdfea38e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
   isGrounded: 0
   jumpForce: 10
+  Accel: 0
+  moveSpeed: 0
+  maxSpeed: 0
+--- !u!114 &6338333405521370803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7703274578903819961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f25ca763c4a9a4e469c8101273e7fab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsAmount: 0
