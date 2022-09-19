@@ -7,6 +7,7 @@ public enum PirateState
     Alive,
     Dead,
 
+
 }
 
 public class CharacterController : MonoBehaviour
@@ -61,6 +62,8 @@ public class CharacterController : MonoBehaviour
                 animController.SetBool("sliding", false);
         }else if (state == PirateState.Dead)
         {
+            animController.SetBool("sliding", false);
+            animController.SetBool("jumping", false);
             animController.SetBool("Dead", true);
         }
         
@@ -132,6 +135,9 @@ public class CharacterController : MonoBehaviour
 
     public void Jump()
     {
+        if (state == PirateState.Dead)
+            return;
+
         if (Input.GetMouseButtonDown(0))
         {
             if (isGrounded == true)
