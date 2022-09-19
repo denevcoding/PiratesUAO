@@ -26,9 +26,13 @@ public class CharacterController : MonoBehaviour
 
     Vector2 colliderDefaultSize = Vector2.zero;
 
+    public bool facingRight;
+
     public float Accel;
     public float moveSpeed;
     public float maxSpeed;
+
+    public Vector2 inputDirection = Vector2.zero;
 
     private void Awake()
     {
@@ -44,6 +48,7 @@ public class CharacterController : MonoBehaviour
     {
         // Make the game run as fast as possible
         Application.targetFrameRate = 60;
+        facingRight = true;
         colliderDefaultSize = capsuleColldier.size;
     }
 
@@ -51,6 +56,8 @@ public class CharacterController : MonoBehaviour
     void Update()
     {
         IsGrounded();
+
+        CalculateInputDirection();
 
         if (state == PirateState.Alive)
         {
@@ -65,8 +72,22 @@ public class CharacterController : MonoBehaviour
             animController.SetBool("sliding", false);
             animController.SetBool("jumping", false);
             animController.SetBool("Dead", true);
+            Vector2 vel = new Vector2(0f, rigibBodie.velocity.y);
+            rigibBodie.velocity = vel;
         }
         
+    }
+
+    public void CalculateInputDirection()
+    {
+        float h = Input.GetAxisRaw("Horizontal");
+        float v = Input.GetAxisRaw("Vertical");
+
+        inputDirection = new Vector2(h, v);
+
+        inputDirection.Normalize();
+
+        Debug.Log("X: " + h + "   " + "Y: " + v);
     }
 
     private void FixedUpdate()
@@ -75,7 +96,8 @@ public class CharacterController : MonoBehaviour
 
         if (state == PirateState.Alive)
         {
-            MoveVelocity();
+            //MoveVelocity();
+            MoveVelocityToInputDirection();
 
             if (animController.GetBool("jumping"))
             {
@@ -95,7 +117,7 @@ public class CharacterController : MonoBehaviour
 
 
 
-    private void Move()
+    private void MoveByForce()
     {
         rigibBodie.AddForce(Vector2.right * moveSpeed , ForceMode2D.Force);
 
@@ -106,13 +128,39 @@ public class CharacterController : MonoBehaviour
     }
 
     public void MoveVelocity()
-    {
-    
-        rigibBodie.velocity = new Vector2(moveSpeed , rigibBodie.velocity.y);
+    {    
+        rigibBodie.velocity = new Vector2(moveSpeed *  Time.deltaTime, rigibBodie.velocity.y);
         //if (rigibBodie.velocity.x > maxSpeed)
         //{
         //    rigibBodie.velocity = maxSpeed;
         //}
+    }
+
+    public void MoveVelocityToInputDirection()
+    {
+        rigibBodie.velocity = new Vector2(inputDirection.x * (moveSpeed * Time.deltaTime), rigibBodie.velocity.y);
+
+        if (inputDirection.x < 0)
+        {
+            if (facingRight != false)
+                Flip();
+
+
+            //entityOwner.GetRenderer().flipX = true;
+        }
+        else if (inputDirection.x > 0)
+        {
+            if (facingRight != true)
+                Flip();
+
+            //entityOwner.GetRenderer().flipX = false;
+        }
+    }
+
+    public void Flip()
+    {
+        facingRight = !facingRight;
+        transform.Rotate(0, 180f, 0);
     }
 
 
