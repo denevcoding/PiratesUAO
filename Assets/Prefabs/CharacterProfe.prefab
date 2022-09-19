@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 365981714623254225}
   - component: {fileID: 1799026408777667004}
   - component: {fileID: 6338333405521370803}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: CharacterProfe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1915616715
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 312671454, guid: fbaeef0c1f9a540f19367e2faccac005, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -122,9 +122,9 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!95 &365981714623254225
 Animator:
@@ -136,7 +136,7 @@ Animator:
   m_GameObject: {fileID: 7703274578903819961}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 59ccfa12f9f6e4747be825f5424cfc07, type: 2}
+  m_Controller: {fileID: 9100000, guid: c27c92fbe8f7d84479d4981ab27dbea8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -160,10 +160,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   isGrounded: 0
-  jumpForce: 10
+  jumpForce: 18
+  facingRight: 0
   Accel: 0
-  moveSpeed: 0
-  maxSpeed: 0
+  moveSpeed: 200
+  maxSpeed: 5
+  inputDirection: {x: 0, y: 0}
 --- !u!114 &6338333405521370803
 MonoBehaviour:
   m_ObjectHideFlags: 0

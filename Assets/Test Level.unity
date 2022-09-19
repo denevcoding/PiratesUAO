@@ -1156,53 +1156,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 365981714623254225, guid: d38ca2df7ed9c5c43abead0e5f18d6ad, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: c27c92fbe8f7d84479d4981ab27dbea8, type: 2}
-    - target: {fileID: 1799026408777667004, guid: d38ca2df7ed9c5c43abead0e5f18d6ad, type: 3}
-      propertyPath: maxSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1799026408777667004, guid: d38ca2df7ed9c5c43abead0e5f18d6ad, type: 3}
-      propertyPath: jumpForce
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 1799026408777667004, guid: d38ca2df7ed9c5c43abead0e5f18d6ad, type: 3}
-      propertyPath: moveSpeed
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 7703274578903819960, guid: d38ca2df7ed9c5c43abead0e5f18d6ad, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7703274578903819960, guid: d38ca2df7ed9c5c43abead0e5f18d6ad, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7703274578903819960, guid: d38ca2df7ed9c5c43abead0e5f18d6ad, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1915616715
-      objectReference: {fileID: 0}
     - target: {fileID: 7703274578903819961, guid: d38ca2df7ed9c5c43abead0e5f18d6ad, type: 3}
       propertyPath: m_Name
       value: CharacterProfe
-      objectReference: {fileID: 0}
-    - target: {fileID: 7703274578903819961, guid: d38ca2df7ed9c5c43abead0e5f18d6ad, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7703274578903819961, guid: d38ca2df7ed9c5c43abead0e5f18d6ad, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7703274578903819962, guid: d38ca2df7ed9c5c43abead0e5f18d6ad, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7703274578903819962, guid: d38ca2df7ed9c5c43abead0e5f18d6ad, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7703274578903819963, guid: d38ca2df7ed9c5c43abead0e5f18d6ad, type: 3}
       propertyPath: m_RootOrder
