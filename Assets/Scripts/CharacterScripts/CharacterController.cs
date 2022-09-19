@@ -2,8 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PirateState
+{
+    Alive,
+    Dead,
+
+
+}
+
 public class CharacterController : MonoBehaviour
 {
+    public PirateState state;
+
     CapsuleCollider2D capsuleColldier;
     Rigidbody2D rigibBodie;
     Animator animController;
@@ -16,9 +26,13 @@ public class CharacterController : MonoBehaviour
 
     Vector2 colliderDefaultSize = Vector2.zero;
 
+    public bool facingRight;
+
     public float Accel;
     public float moveSpeed;
     public float maxSpeed;
+
+    public Vector2 inputDirection = Vector2.zero;
 
     private void Awake()
     {
@@ -32,49 +46,78 @@ public class CharacterController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Make the game run as fast as possible
+        Application.targetFrameRate = 60;
+        facingRight = true;
         colliderDefaultSize = capsuleColldier.size;
     }
 
     // Update is called once per frame
     void Update()
     {
-        IsGrounded();       
+        IsGrounded();
 
-        Jump();
+        CalculateInputDirection();
 
-        Slide();
+        if (state == PirateState.Alive)
+        {
+            Jump();
 
+            Slide();
 
-
-
-        if (isGrounded == false)
+            if (isGrounded == false)
+                animController.SetBool("sliding", false);
+        }else if (state == PirateState.Dead)
+        {
             animController.SetBool("sliding", false);
+            animController.SetBool("jumping", false);
+            animController.SetBool("Dead", true);
+            Vector2 vel = new Vector2(0f, rigibBodie.velocity.y);
+            rigibBodie.velocity = vel;
+        }
         
-        
+    }
+
+    public void CalculateInputDirection()
+    {
+        float h = Input.GetAxisRaw("Horizontal");
+        float v = Input.GetAxisRaw("Vertical");
+
+        inputDirection = new Vector2(h, v);
+
+        inputDirection.Normalize();
+
+        Debug.Log("X: " + h + "   " + "Y: " + v);
     }
 
     private void FixedUpdate()
     {
         //Move();
 
-        MoveVelocity();
-
-        if (animController.GetBool("jumping"))
+        if (state == PirateState.Alive)
         {
-            if (rigibBodie.velocity.y <= -1)
+            //MoveVelocity();
+            MoveVelocityToInputDirection();
+
+            if (animController.GetBool("jumping"))
             {
-                capsuleColldier.size = colliderDefaultSize;
-                animController.SetBool("jumping", false);
-                animController.SetBool("sliding", false);                
+                if (rigibBodie.velocity.y <= -1)
+                {
+                    capsuleColldier.size = colliderDefaultSize;
+                    animController.SetBool("jumping", false);
+                    animController.SetBool("sliding", false);
+                }
             }
+
+            //Debug.Log(rigibBodie.velocity.magnitude);
         }
 
-        Debug.Log(rigibBodie.velocity.magnitude);
+
     }
 
 
 
-    private void Move()
+    private void MoveByForce()
     {
         rigibBodie.AddForce(Vector2.right * moveSpeed , ForceMode2D.Force);
 
@@ -85,13 +128,39 @@ public class CharacterController : MonoBehaviour
     }
 
     public void MoveVelocity()
-    {
-    
-        rigibBodie.velocity = new Vector2(moveSpeed , rigibBodie.velocity.y);
+    {    
+        rigibBodie.velocity = new Vector2(moveSpeed *  Time.deltaTime, rigibBodie.velocity.y);
         //if (rigibBodie.velocity.x > maxSpeed)
         //{
         //    rigibBodie.velocity = maxSpeed;
         //}
+    }
+
+    public void MoveVelocityToInputDirection()
+    {
+        rigibBodie.velocity = new Vector2(inputDirection.x * (moveSpeed * Time.deltaTime), rigibBodie.velocity.y);
+
+        if (inputDirection.x < 0)
+        {
+            if (facingRight != false)
+                Flip();
+
+
+            //entityOwner.GetRenderer().flipX = true;
+        }
+        else if (inputDirection.x > 0)
+        {
+            if (facingRight != true)
+                Flip();
+
+            //entityOwner.GetRenderer().flipX = false;
+        }
+    }
+
+    public void Flip()
+    {
+        facingRight = !facingRight;
+        transform.Rotate(0, 180f, 0);
     }
 
 
@@ -114,6 +183,9 @@ public class CharacterController : MonoBehaviour
 
     public void Jump()
     {
+        if (state == PirateState.Dead)
+            return;
+
         if (Input.GetMouseButtonDown(0))
         {
             if (isGrounded == true)
@@ -150,4 +222,15 @@ public class CharacterController : MonoBehaviour
             capsuleColldier.size = colliderDefaultSize;
         }
     }
+
+
+    public void Dead()
+    {
+        state = PirateState.Dead;
+        animController.SetBool("Dead", true);
+
+    }
+
+
+
 }
