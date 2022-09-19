@@ -186,7 +186,7 @@ public class CharacterController : MonoBehaviour
         if (state == PirateState.Dead)
             return;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (isGrounded == true)
             {
