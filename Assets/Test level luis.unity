@@ -220,6 +220,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!212 &54120867
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1659,6 +1660,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!212 &195199113
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1913,6 +1915,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!1 &268323290
 GameObject:
   m_ObjectHideFlags: 0
@@ -2210,6 +2213,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!212 &315350645
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2359,6 +2363,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!212 &363904052
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2614,6 +2619,7 @@ MonoBehaviour:
   TimeToDestroy: 1
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!1 &429373616
 GameObject:
   m_ObjectHideFlags: 0
@@ -3109,6 +3115,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!212 &500135329
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3265,6 +3272,7 @@ MonoBehaviour:
   TimeToDestroy: 1
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!1 &515639646
 GameObject:
   m_ObjectHideFlags: 0
@@ -3669,7 +3677,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.747947, y: 7.3233595, z: -10}
+  m_LocalPosition: {x: -1.747947, y: 7.17336, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4184,6 +4192,7 @@ MonoBehaviour:
   TimeToDestroy: 1
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -4973,7 +4982,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &815516516
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5255,6 +5264,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!1001 &900910139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5941,6 +5951,7 @@ MonoBehaviour:
   TimeToDestroy: 1
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!1 &962573955
 GameObject:
   m_ObjectHideFlags: 0
@@ -6045,6 +6056,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!1001 &989563974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6622,6 +6634,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!212 &1030024492
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7128,6 +7141,7 @@ MonoBehaviour:
   TimeToDestroy: 1
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!1 &1056754483 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9177799258992620042, guid: 47b74c6aa70c44abd93840262e756e7a, type: 3}
@@ -7148,6 +7162,7 @@ MonoBehaviour:
   TimeToDestroy: 1
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!1 &1061310776
 GameObject:
   m_ObjectHideFlags: 0
@@ -7558,6 +7573,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!212 &1103967836
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7630,6 +7646,7 @@ MonoBehaviour:
   TimeToDestroy: 1
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!1 &1177359048
 GameObject:
   m_ObjectHideFlags: 0
@@ -8013,6 +8030,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!212 &1207838923
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8551,6 +8569,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!212 &1266888592
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8764,6 +8783,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!1001 &1320447785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9253,7 +9273,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386512658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.747947, y: 7.3233595, z: -10}
+  m_LocalPosition: {x: -1.747947, y: 7.17336, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9743,6 +9763,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!212 &1489739104
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10023,6 +10044,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!212 &1506072883
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10670,7 +10692,7 @@ PrefabInstance:
     - target: {fileID: 7703274578903819960, guid: d38ca2df7ed9c5c43abead0e5f18d6ad, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 935779394, guid: 39152f7cee7376b439446bd2c8d3a93c, type: 3}
+      objectReference: {fileID: -1950836254, guid: 9346c6eeeaf0942638f54ca6228c8ff1, type: 3}
     - target: {fileID: 7703274578903819960, guid: d38ca2df7ed9c5c43abead0e5f18d6ad, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -10697,7 +10719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7703274578903819963, guid: d38ca2df7ed9c5c43abead0e5f18d6ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8
+      value: 1.65
       objectReference: {fileID: 0}
     - target: {fileID: 7703274578903819963, guid: d38ca2df7ed9c5c43abead0e5f18d6ad, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12213,6 +12235,7 @@ MonoBehaviour:
   TimeToDestroy: 1
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!1001 &1733668013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12634,6 +12657,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!212 &1810631573
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13158,6 +13182,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!212 &1867152405
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13322,6 +13347,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!212 &1875468924
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13555,6 +13581,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!212 &1880909728
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13704,6 +13731,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!212 &1901182449
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14386,6 +14414,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!1 &2002161601
 GameObject:
   m_ObjectHideFlags: 0
@@ -14629,6 +14658,7 @@ MonoBehaviour:
   TimeToDestroy: 2
   Counter: 0
   counting: 0
+  lvlManager: {fileID: 0}
 --- !u!212 &2003991258
 SpriteRenderer:
   m_ObjectHideFlags: 0
