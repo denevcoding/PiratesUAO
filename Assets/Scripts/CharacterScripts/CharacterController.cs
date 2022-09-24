@@ -29,6 +29,9 @@ public class CharacterController : MonoBehaviour
     public float coyoteTime;
     public float coyoteTimeCounter;
 
+    [Header("Sliding")]
+    public ParticleSystem dust;
+
     Vector2 colliderDefaultSize = Vector2.zero;
 
     public bool facingRight;
@@ -82,6 +85,8 @@ public class CharacterController : MonoBehaviour
 
             if (isGrounded == false)
                 animController.SetBool("sliding", false);
+
+
         }else if (state == PirateState.Dead)
         {
             animController.SetBool("sliding", false);
@@ -243,6 +248,9 @@ public class CharacterController : MonoBehaviour
         {
             if (isGrounded == true && Mathf.Abs(inputDirection.x)  > 0f)
             {
+
+                dust.Play();
+                //dust.gameObject.SetActive(true);
                 moveSpeed *= 2f;
                 animController.SetBool("sliding", true);
                 Vector2 size = capsuleColldier.size;
@@ -252,6 +260,8 @@ public class CharacterController : MonoBehaviour
         }
         else
         {
+            dust.Stop();
+            
             animController.SetBool("sliding", false);           
             capsuleColldier.size = colliderDefaultSize;
         }

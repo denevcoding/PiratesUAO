@@ -13,6 +13,7 @@ public class Plataforma : MonoBehaviour
 
     public LevelManager lvlManager;
 
+
     // Start is called before the first frame update
     void Start()
     {
