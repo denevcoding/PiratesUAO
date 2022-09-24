@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dfe91606bed08c5468000b684af4015a
+guid: 9346c6eeeaf0942638f54ca6228c8ff1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jump_0
+      name: Caer_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1387.6
-        height: 1488
+        width: 1415.7
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a6b41b9623b87046b3d33629ed42c00
-      internalID: 1829205499
+      spriteID: 2d1084df926044cca9b48d9842e1a76f
+      internalID: 1140197181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_1
+      name: Caer_1
       rect:
         serializedVersion: 2
-        x: 1387
+        x: 1415
         y: 0
-        width: 1387.6
-        height: 1488
+        width: 1415.7
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0f70ab40bd9b0640afd9ca298aa2edc
-      internalID: 1074850216
+      spriteID: 7da9d31e67ff4489fb0073320b9a221f
+      internalID: -1575870146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_2
+      name: Caer_2
       rect:
         serializedVersion: 2
-        x: 2774
+        x: 2830
         y: 0
-        width: 1387.6
-        height: 1488
+        width: 1415.7
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00846659df1927247bc01fee6eb044aa
-      internalID: 214128112
+      spriteID: b56cd03d6ee3c494c829b128ee4ed503
+      internalID: -2098911237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_3
+      name: Caer_3
       rect:
         serializedVersion: 2
-        x: 4161
+        x: 4245
         y: 0
-        width: 1387.6
-        height: 1488
+        width: 1415.7
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc6a83b1b1cd9ba469601bb5114b5ba4
-      internalID: -947765955
+      spriteID: 8b70c7965cfd14cf2927431ce1fa735c
+      internalID: -1351059599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_4
+      name: Caer_4
       rect:
         serializedVersion: 2
-        x: 5548
+        x: 5660
         y: 0
-        width: 1387.6
-        height: 1488
+        width: 1415.7
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48ade25106cb4b3408941b0ca2a8e7cb
-      internalID: -2125729186
+      spriteID: 6532db55d64ed4a9cb055a225dfc17a3
+      internalID: -82498566
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_5
+      name: Caer_5
       rect:
         serializedVersion: 2
-        x: 6935
+        x: 7075
         y: 0
-        width: 1387.6
-        height: 1488
+        width: 1415.7
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,20 +236,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a3d7c7e6ad119740b3a4af2e0016834
-      internalID: 1913721504
+      spriteID: 6225dd884f6d547978fdc3d1172b88b9
+      internalID: -1425710816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_6
+      name: Caer_6
       rect:
         serializedVersion: 2
-        x: 8322
+        x: 8490
         y: 0
-        width: 1387.6
-        height: 1488
+        width: 1415.7
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,20 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b27293246d3b1b4ea1cb1b07cf10aac
-      internalID: -601664466
+      spriteID: 0305560d973174f6491c167732ed4312
+      internalID: 1425105742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_7
+      name: Caer_7
       rect:
         serializedVersion: 2
-        x: 9709
+        x: 9905
         y: 0
-        width: 1387.6
-        height: 1488
+        width: 1415.7
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,20 +278,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3447621b76ce3b42a6496656a3f655c
-      internalID: -1831477811
+      spriteID: a7db5fb601d574b63b861b6f715a23e1
+      internalID: -1950836254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_8
+      name: Caer_8
       rect:
         serializedVersion: 2
-        x: 11096
+        x: 11320
         y: 0
-        width: 1387.6
-        height: 1488
+        width: 1415.7
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,20 +299,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4554033b850c4542be4f044a85df42d
-      internalID: 1450113944
+      spriteID: 0bb5ec7fb7fd042ccaa309d50d543f5a
+      internalID: -202339689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_9
+      name: Caer_9
       rect:
         serializedVersion: 2
-        x: 12483
+        x: 12735
         y: 0
-        width: 1387.6
-        height: 1488
+        width: 1415.7
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,8 +320,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94efd40a6052e5c4d80304f53c15eccb
-      internalID: 1602015761
+      spriteID: 1967cbbf2cb2f4905919046b9e63c791
+      internalID: 1358268711
       vertices: []
       indices: 
       edges: []
@@ -337,16 +337,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Jump_3: -947765955
-      Jump_1: 1074850216
-      Jump_2: 214128112
-      Jump_5: 1913721504
-      Jump_6: -601664466
-      Jump_8: 1450113944
-      Jump_4: -2125729186
-      Jump_7: -1831477811
-      Jump_0: 1829205499
-      Jump_9: 1602015761
+      Caer_2: -2098911237
+      Caer_3: -1351059599
+      Caer_4: -82498566
+      Caer_9: 1358268711
+      Caer_0: 1140197181
+      Caer_5: -1425710816
+      Caer_6: 1425105742
+      Caer_1: -1575870146
+      Caer_8: -202339689
+      Caer_7: -1950836254
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

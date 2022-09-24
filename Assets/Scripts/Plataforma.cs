@@ -6,13 +6,22 @@ public class Plataforma : MonoBehaviour
 {
     public float TimeToDestroy;
     public float Counter;
+    private float timeToRespawn;
 
     public bool counting;
+    Vector3 initialPosition;
+
+    public LevelManager lvlManager;
+
 
     // Start is called before the first frame update
     void Start()
     {
         Counter = 0f;
+        timeToRespawn = 3f;
+        initialPosition = transform.position;
+
+        lvlManager = GameObject.FindObjectOfType<LevelManager>();
     }
 
     // Update is called once per frame
@@ -53,11 +62,18 @@ public class Plataforma : MonoBehaviour
             if (Counter >= TimeToDestroy)
             {
                 Debug.Log("Me destruyo");
+                lvlManager.RespawnPlatform(this.gameObject, initialPosition, timeToRespawn);
+                counting = false;
+                Counter = 0f;
                 this.gameObject.SetActive(false);
+               
                 //Destroy(this.gameObject);
             }
         }
     }
+
+
+    
 
 
 

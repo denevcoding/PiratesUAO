@@ -4,42 +4,52 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    public GameObject[] obstacles;
-  
+    public SpawnPoint lastCheckPoint;
 
+    public CharacterController character;
+
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        float x = 12;
-        float y = Random.Range(-3 , 3);
-
-        Vector2 obstaclePos = new Vector2(x, y);
-
-        SpawnObstacle(obstaclePos);
+        character.lvlManager = this;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (true)
-        {
-            
-        }
+        
+    }
+       
+    public void CheckPoint()
+    {
+        
+    }
+
+    public void Respawn()
+    {
+        character.gameObject.SetActive(false);
+        character.transform.position = lastCheckPoint.transform.position;
+        character.Reborn();
+        character.gameObject.SetActive(true);
     }
 
 
-   
-
-    public void SpawnObstacle(Vector2 pos)
+    public void RespawnPlatform(GameObject platform, Vector3 position, float time)
     {
-        int obstacleIndex = (int)Random.Range(0, 2);
+        StartCoroutine(ReActivatePlatform(platform, time));        
+    }
 
-        GameObject obstacle = Instantiate(obstacles[obstacleIndex], pos, Quaternion.identity);
 
-        obstacle.GetComponent<ObstacleMovement>().speed = 5f;
-        obstacle.GetComponent<ObstacleMovement>().lvlManager = this;
-    } 
+    IEnumerator ReActivatePlatform(GameObject platform, float time)
+    {        
+        yield return new WaitForSeconds(time);
+        platform.SetActive(true);
+       
+    }
+
 }
 
 

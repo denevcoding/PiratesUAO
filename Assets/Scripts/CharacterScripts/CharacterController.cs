@@ -14,6 +14,8 @@ public class CharacterController : MonoBehaviour
 {
     public PirateState state;
 
+    public LevelManager lvlManager;
+
     CapsuleCollider2D capsuleColldier;
     Rigidbody2D rigibBodie;
     Animator animController;
@@ -22,15 +24,23 @@ public class CharacterController : MonoBehaviour
 
     public bool isGrounded= false;
 
+    [Header("Jumping")]
     public float jumpForce = 10f;
+    public float coyoteTime;
+    public float coyoteTimeCounter;
+
+    [Header("Sliding")]
+    public ParticleSystem dust;
 
     Vector2 colliderDefaultSize = Vector2.zero;
 
     public bool facingRight;
 
-    public float Accel;
+    //public float Accel;
     public float moveSpeed;
     public float maxSpeed;
+    public float airSpeed;
+    public float groundSpeed;
 
     public Vector2 inputDirection = Vector2.zero;
 
@@ -57,6 +67,14 @@ public class CharacterController : MonoBehaviour
     {
         IsGrounded();
 
+        HandleCoyoteTime();
+
+        if (isGrounded)        
+            moveSpeed = groundSpeed;        
+        else        
+            moveSpeed = airSpeed;
+        
+
         CalculateInputDirection();
 
         if (state == PirateState.Alive)
@@ -67,6 +85,8 @@ public class CharacterController : MonoBehaviour
 
             if (isGrounded == false)
                 animController.SetBool("sliding", false);
+
+
         }else if (state == PirateState.Dead)
         {
             animController.SetBool("sliding", false);
@@ -86,6 +106,13 @@ public class CharacterController : MonoBehaviour
         inputDirection = new Vector2(h, v);
 
         inputDirection.Normalize();
+
+        if (inputDirection.magnitude > 0f)        
+            animController.SetBool("Running", true);
+        else        
+            animController.SetBool("Running", false);
+        
+        
 
         Debug.Log("X: " + h + "   " + "Y: " + v);
     }
@@ -112,7 +139,7 @@ public class CharacterController : MonoBehaviour
             //Debug.Log(rigibBodie.velocity.magnitude);
         }
 
-
+        animController.SetFloat("YVel", rigibBodie.velocity.y);
     }
 
 
@@ -188,7 +215,7 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (isGrounded == true)
+            if (coyoteTimeCounter > 0f)
             {
                 capsuleColldier.size = colliderDefaultSize;
 
@@ -200,16 +227,31 @@ public class CharacterController : MonoBehaviour
         }
     }
 
+    public void HandleCoyoteTime()
+    {
+        if (isGrounded)
+        {
+            coyoteTimeCounter = coyoteTime;
+        }
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+    }
 
 
 
     public void Slide()
     {
         //sliding prototype
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1) || Input.GetKey(KeyCode.DownArrow))
         {
-            if (isGrounded == true)
+            if (isGrounded == true && Mathf.Abs(inputDirection.x)  > 0f)
             {
+
+                dust.Play();
+                //dust.gameObject.SetActive(true);
+                moveSpeed *= 2f;
                 animController.SetBool("sliding", true);
                 Vector2 size = capsuleColldier.size;
                 size.y = 1.26f;
@@ -218,6 +260,8 @@ public class CharacterController : MonoBehaviour
         }
         else
         {
+            dust.Stop();
+            
             animController.SetBool("sliding", false);           
             capsuleColldier.size = colliderDefaultSize;
         }
@@ -229,8 +273,19 @@ public class CharacterController : MonoBehaviour
         state = PirateState.Dead;
         animController.SetBool("Dead", true);
 
+        Invoke("Respawn", 3f);
     }
 
+    public void Respawn()
+    {
+        lvlManager.Respawn();
+    }
 
+    public void Reborn()
+    {
+        animController.SetBool("Dead", false);
+        state = PirateState.Alive;
+     
+    }
 
 }
