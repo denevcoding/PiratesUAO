@@ -35,7 +35,21 @@ public class LevelManager : MonoBehaviour
         character.Reborn();
         character.gameObject.SetActive(true);
     }
-    
+
+
+    public void RespawnPlatform(GameObject platform, Vector3 position, float time)
+    {
+        StartCoroutine(ReActivatePlatform(platform, time));        
+    }
+
+
+    IEnumerator ReActivatePlatform(GameObject platform, float time)
+    {        
+        yield return new WaitForSeconds(time);
+        platform.SetActive(true);
+       
+    }
+
 }
 
 

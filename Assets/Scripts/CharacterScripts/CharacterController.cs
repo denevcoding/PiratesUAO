@@ -24,7 +24,10 @@ public class CharacterController : MonoBehaviour
 
     public bool isGrounded= false;
 
+    [Header("Jumping")]
     public float jumpForce = 10f;
+    public float coyoteTime;
+    public float coyoteTimeCounter;
 
     Vector2 colliderDefaultSize = Vector2.zero;
 
@@ -60,6 +63,8 @@ public class CharacterController : MonoBehaviour
     void Update()
     {
         IsGrounded();
+
+        HandleCoyoteTime();
 
         if (isGrounded)        
             moveSpeed = groundSpeed;        
@@ -97,6 +102,13 @@ public class CharacterController : MonoBehaviour
 
         inputDirection.Normalize();
 
+        if (inputDirection.magnitude > 0f)        
+            animController.SetBool("Running", true);
+        else        
+            animController.SetBool("Running", false);
+        
+        
+
         Debug.Log("X: " + h + "   " + "Y: " + v);
     }
 
@@ -122,7 +134,7 @@ public class CharacterController : MonoBehaviour
             //Debug.Log(rigibBodie.velocity.magnitude);
         }
 
-
+        animController.SetFloat("YVel", rigibBodie.velocity.y);
     }
 
 
@@ -198,7 +210,7 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (isGrounded == true)
+            if (coyoteTimeCounter > 0f)
             {
                 capsuleColldier.size = colliderDefaultSize;
 
@@ -210,16 +222,28 @@ public class CharacterController : MonoBehaviour
         }
     }
 
+    public void HandleCoyoteTime()
+    {
+        if (isGrounded)
+        {
+            coyoteTimeCounter = coyoteTime;
+        }
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+    }
 
 
 
     public void Slide()
     {
         //sliding prototype
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1) || Input.GetKey(KeyCode.DownArrow))
         {
-            if (isGrounded == true)
+            if (isGrounded == true && Mathf.Abs(inputDirection.x)  > 0f)
             {
+                moveSpeed *= 2f;
                 animController.SetBool("sliding", true);
                 Vector2 size = capsuleColldier.size;
                 size.y = 1.26f;
