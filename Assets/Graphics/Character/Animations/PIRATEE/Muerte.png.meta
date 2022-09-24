@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dfe91606bed08c5468000b684af4015a
+guid: e40cc1a9b41cd45a993dfbdba27962ca
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,12 +117,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jump_0
+      name: Muerte_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1387.6
+        width: 1600.9
         height: 1488
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -131,19 +131,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a6b41b9623b87046b3d33629ed42c00
-      internalID: 1829205499
+      spriteID: 53390e1c1fa244302bc1978c2b4b73ac
+      internalID: 153475192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_1
+      name: Muerte_1
       rect:
         serializedVersion: 2
-        x: 1387
+        x: 1600
         y: 0
-        width: 1387.6
+        width: 1600.9
         height: 1488
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -152,19 +152,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0f70ab40bd9b0640afd9ca298aa2edc
-      internalID: 1074850216
+      spriteID: f581663a872b1405dae8f4553cb4882d
+      internalID: 1896649689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_2
+      name: Muerte_2
       rect:
         serializedVersion: 2
-        x: 2774
+        x: 3200
         y: 0
-        width: 1387.6
+        width: 1600.9
         height: 1488
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -173,19 +173,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00846659df1927247bc01fee6eb044aa
-      internalID: 214128112
+      spriteID: f4d982dd8a051418b86f9aebf62064da
+      internalID: 1289726139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_3
+      name: Muerte_3
       rect:
         serializedVersion: 2
-        x: 4161
+        x: 4800
         y: 0
-        width: 1387.6
+        width: 1600.9
         height: 1488
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -194,19 +194,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc6a83b1b1cd9ba469601bb5114b5ba4
-      internalID: -947765955
+      spriteID: 11e1ec79347df4d30ac80443dc454878
+      internalID: -1685504221
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_4
+      name: Muerte_4
       rect:
         serializedVersion: 2
-        x: 5548
+        x: 6400
         y: 0
-        width: 1387.6
+        width: 1600.9
         height: 1488
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -215,19 +215,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48ade25106cb4b3408941b0ca2a8e7cb
-      internalID: -2125729186
+      spriteID: da27db09ea1bf42fa8232eee89a57c2f
+      internalID: 1775883237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_5
+      name: Muerte_5
       rect:
         serializedVersion: 2
-        x: 6935
+        x: 8000
         y: 0
-        width: 1387.6
+        width: 1600.9
         height: 1488
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -236,19 +236,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a3d7c7e6ad119740b3a4af2e0016834
-      internalID: 1913721504
+      spriteID: bd390ec4626b7425fb4fcbfdb9eed2c4
+      internalID: 1577451273
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_6
+      name: Muerte_6
       rect:
         serializedVersion: 2
-        x: 8322
+        x: 9600
         y: 0
-        width: 1387.6
+        width: 1600.9
         height: 1488
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -257,19 +257,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b27293246d3b1b4ea1cb1b07cf10aac
-      internalID: -601664466
+      spriteID: d02aade2678f84483b7acbec414ab0da
+      internalID: -273089164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_7
+      name: Muerte_7
       rect:
         serializedVersion: 2
-        x: 9709
+        x: 11200
         y: 0
-        width: 1387.6
+        width: 1600.9
         height: 1488
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -278,19 +278,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3447621b76ce3b42a6496656a3f655c
-      internalID: -1831477811
+      spriteID: 536c2311ca705414bb70b1e0e641666b
+      internalID: -165128780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_8
+      name: Muerte_8
       rect:
         serializedVersion: 2
-        x: 11096
+        x: 12800
         y: 0
-        width: 1387.6
+        width: 1600.9
         height: 1488
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -299,19 +299,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4554033b850c4542be4f044a85df42d
-      internalID: 1450113944
+      spriteID: 913287678b00a4d4c99c3f94a151b6bf
+      internalID: 372246299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_9
+      name: Muerte_9
       rect:
         serializedVersion: 2
-        x: 12483
+        x: 14400
         y: 0
-        width: 1387.6
+        width: 1600.9
         height: 1488
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -320,8 +320,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94efd40a6052e5c4d80304f53c15eccb
-      internalID: 1602015761
+      spriteID: f261ff69247fe41d7ae6178b7d2987df
+      internalID: 1201861973
       vertices: []
       indices: 
       edges: []
@@ -337,16 +337,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Jump_3: -947765955
-      Jump_1: 1074850216
-      Jump_2: 214128112
-      Jump_5: 1913721504
-      Jump_6: -601664466
-      Jump_8: 1450113944
-      Jump_4: -2125729186
-      Jump_7: -1831477811
-      Jump_0: 1829205499
-      Jump_9: 1602015761
+      Muerte_6: -273089164
+      Muerte_8: 372246299
+      Muerte_1: 1896649689
+      Muerte_2: 1289726139
+      Muerte_7: -165128780
+      Muerte_9: 1201861973
+      Muerte_0: 153475192
+      Muerte_4: 1775883237
+      Muerte_5: 1577451273
+      Muerte_3: -1685504221
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

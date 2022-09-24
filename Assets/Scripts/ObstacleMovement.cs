@@ -21,11 +21,11 @@ public class ObstacleMovement : MonoBehaviour
 
         moveObstacle();
 
-        if (transform.position.x < -13)
+        /*if (transform.position.x < -13)
         {
             lvlManager.SpawnObstacle(new Vector2(12, 1));
             Destroy(this.gameObject);
-        }
+        }*/
     }
 
     public void moveObstacle()

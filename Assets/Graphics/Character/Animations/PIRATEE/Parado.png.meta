@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 39152f7cee7376b439446bd2c8d3a93c
+guid: 5848f61ecf0c84ddf805f34b979cf25d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 48
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Running_0
+      name: Parado_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 200
-        height: 149
+        width: 1139.2
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3156b9bb13cdf54998df7bf5e57b476
-      internalID: 935779394
+      spriteID: 4685bae2f5ca74579ad2febf66b9935a
+      internalID: 545455560
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Running_1
+      name: Parado_1
       rect:
         serializedVersion: 2
-        x: 200
+        x: 1139
         y: 0
-        width: 200
-        height: 149
+        width: 1139.2
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e2e7f93446a41446a9416212ea5cfb3
-      internalID: 100782709
+      spriteID: e316ddd0f9f934e6cbadbcdb5643c452
+      internalID: -150880160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Running_2
+      name: Parado_2
       rect:
         serializedVersion: 2
-        x: 400
+        x: 2278
         y: 0
-        width: 200
-        height: 149
+        width: 1139.2
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4eed8beeb1e84874496c7789c1dc5bdd
-      internalID: -623876105
+      spriteID: 36ccf0e16693a417896c97e1b3107b51
+      internalID: -103278006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Running_3
+      name: Parado_3
       rect:
         serializedVersion: 2
-        x: 600
+        x: 3417
         y: 0
-        width: 200
-        height: 149
+        width: 1139.2
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfe6dfd6c0e5a204dadd603a4d087310
-      internalID: -2118891098
+      spriteID: d0bdcdc5c15d74cf08a811ddb9717e80
+      internalID: -148077594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Running_4
+      name: Parado_4
       rect:
         serializedVersion: 2
-        x: 800
+        x: 4556
         y: 0
-        width: 200
-        height: 149
+        width: 1139.2
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b770f42e3021a5546867f6b04b0c11e1
-      internalID: 2098643766
+      spriteID: 4e392d7eeb9ea478fbc2cd0d5b3fc5cc
+      internalID: 1195028172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Running_5
+      name: Parado_5
       rect:
         serializedVersion: 2
-        x: 1000
+        x: 5695
         y: 0
-        width: 200
-        height: 149
+        width: 1139.2
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,20 +236,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aed117d14bd94c64cb4bc38d8594b7ad
-      internalID: -251430878
+      spriteID: 83bd9bbdcdf884a9eb837e3ad485e565
+      internalID: -1000567217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Running_6
+      name: Parado_6
       rect:
         serializedVersion: 2
-        x: 1200
+        x: 6834
         y: 0
-        width: 200
-        height: 149
+        width: 1139.2
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,20 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9a0cef643c0d3c41a1ababe5682b11b
-      internalID: 163103328
+      spriteID: a54474285c1f74505a0c0240f9200308
+      internalID: -923777431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Running_7
+      name: Parado_7
       rect:
         serializedVersion: 2
-        x: 1400
+        x: 7973
         y: 0
-        width: 200
-        height: 149
+        width: 1139.2
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,20 +278,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 439ad9d3fcb0bae41b8116457ba10bc5
-      internalID: -178470287
+      spriteID: 37db5370c66d04dac910b2880c3d923b
+      internalID: 1363993287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Running_8
+      name: Parado_8
       rect:
         serializedVersion: 2
-        x: 1600
+        x: 9112
         y: 0
-        width: 200
-        height: 149
+        width: 1139.2
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,20 +299,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6ec1c6c962e8a849b000cad4b0d1027
-      internalID: -929261557
+      spriteID: 1e0002260f1aa447d960c204f15ebe03
+      internalID: -461297909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Running_9
+      name: Parado_9
       rect:
         serializedVersion: 2
-        x: 1800
+        x: 10251
         y: 0
-        width: 200
-        height: 149
+        width: 1139.2
+        height: 1489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,8 +320,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18b53eaae21372244b860a3777fcfd8c
-      internalID: 24578976
+      spriteID: 4cc7c845c95994cb599581ae58806ebb
+      internalID: -1373805508
       vertices: []
       indices: 
       edges: []
@@ -337,16 +337,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Running_2: -623876105
-      Running_3: -2118891098
-      Running_1: 100782709
-      Running_0: 935779394
-      Running_9: 24578976
-      Running_5: -251430878
-      Running_7: -178470287
-      Running_4: 2098643766
-      Running_8: -929261557
-      Running_6: 163103328
+      Parado_5: -1000567217
+      Parado_9: -1373805508
+      Parado_3: -148077594
+      Parado_0: 545455560
+      Parado_6: -923777431
+      Parado_2: -103278006
+      Parado_8: -461297909
+      Parado_7: 1363993287
+      Parado_4: 1195028172
+      Parado_1: -150880160
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

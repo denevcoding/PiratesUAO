@@ -14,6 +14,8 @@ public class CharacterController : MonoBehaviour
 {
     public PirateState state;
 
+    public LevelManager lvlManager;
+
     CapsuleCollider2D capsuleColldier;
     Rigidbody2D rigibBodie;
     Animator animController;
@@ -28,9 +30,11 @@ public class CharacterController : MonoBehaviour
 
     public bool facingRight;
 
-    public float Accel;
+    //public float Accel;
     public float moveSpeed;
     public float maxSpeed;
+    public float airSpeed;
+    public float groundSpeed;
 
     public Vector2 inputDirection = Vector2.zero;
 
@@ -56,6 +60,12 @@ public class CharacterController : MonoBehaviour
     void Update()
     {
         IsGrounded();
+
+        if (isGrounded)        
+            moveSpeed = groundSpeed;        
+        else        
+            moveSpeed = airSpeed;
+        
 
         CalculateInputDirection();
 
@@ -229,8 +239,19 @@ public class CharacterController : MonoBehaviour
         state = PirateState.Dead;
         animController.SetBool("Dead", true);
 
+        Invoke("Respawn", 3f);
     }
 
+    public void Respawn()
+    {
+        lvlManager.Respawn();
+    }
 
+    public void Reborn()
+    {
+        animController.SetBool("Dead", false);
+        state = PirateState.Alive;
+     
+    }
 
 }
