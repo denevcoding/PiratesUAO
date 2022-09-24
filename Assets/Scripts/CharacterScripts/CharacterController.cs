@@ -6,8 +6,6 @@ public enum PirateState
 {
     Alive,
     Dead,
-
-
 }
 
 public class CharacterController : MonoBehaviour
