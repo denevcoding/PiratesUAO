@@ -5,6 +5,7 @@ using UnityEngine;
 public class Piker : MonoBehaviour
 {
     public int coinsAmount;
+    public AudioClip gotCollectible;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class Piker : MonoBehaviour
         if (collision.gameObject.tag == "collectible")
         {
             coinsAmount ++;
+            GetComponent<CharacterController>().PlayVFXSound(gotCollectible, 0.8f);
             Destroy(collision.gameObject);
         }
     }
