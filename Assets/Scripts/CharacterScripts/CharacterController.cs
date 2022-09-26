@@ -23,6 +23,7 @@ public class CharacterController : MonoBehaviour
     LayerMask obstacleMask;
 
     public AudioClip jumpSoundClip;
+    public AudioClip DeadSoundClip;
 
     public bool isGrounded= false;
 
@@ -282,7 +283,9 @@ public class CharacterController : MonoBehaviour
     {
         state = PirateState.Dead;
         animController.SetBool("Dead", true);
-        
+        PlayVFXSound(DeadSoundClip, 0.5f);
+
+
     }
 
     public void Respawn()
