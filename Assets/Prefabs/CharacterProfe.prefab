@@ -4976,6 +4976,7 @@ MonoBehaviour:
   state: 0
   lvlManager: {fileID: 0}
   charStats: {fileID: 0}
+  jumpSoundClip: {fileID: 8300000, guid: c5c02ae23a9a8554b9a098b3a3785994, type: 3}
   isGrounded: 0
   jumpForce: 18
   coyoteTime: 0.1
@@ -5000,6 +5001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinsAmount: 0
+  gotCollectible: {fileID: 8300000, guid: 701e066a8ecbef449b79ff4d83c5772a, type: 3}
 --- !u!114 &1704901360
 MonoBehaviour:
   m_ObjectHideFlags: 0
