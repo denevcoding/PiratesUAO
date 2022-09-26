@@ -13,6 +13,10 @@ public class LevelManager : MonoBehaviour
     public SpawnPoint lastCheckPoint;
     public CharacterController character;
 
+    public AudioSource levelMusicSource;
+    public AudioClip menuMusic;
+    public AudioClip gameplayMusic;
+
 
     public GameState gameState = GameState.Intro;
     
@@ -20,11 +24,16 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        levelMusicSource = GetComponent<AudioSource>();
+
         character.lvlManager = this;
 
 
         gameState = GameState.Intro;
         character.gameObject.SetActive(false);
+
+        PlayMusic(menuMusic, 0.8f);
     }
 
     // Update is called once per frame
@@ -43,6 +52,7 @@ public class LevelManager : MonoBehaviour
     public void InitializeGame()
     {
         character.gameObject.SetActive(true);
+        PlayMusic(gameplayMusic, 0.4f);
     }
 
 
@@ -66,6 +76,16 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(time);
         platform.SetActive(true);
        
+    }
+
+
+
+
+    public void PlayMusic(AudioClip clip, float volume)
+    {
+        levelMusicSource.clip = clip;
+        levelMusicSource.volume = volume;
+        levelMusicSource.Play();
     }
 
 }

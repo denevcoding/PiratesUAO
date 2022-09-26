@@ -13,14 +13,16 @@ public class CharacterController : MonoBehaviour
     public PirateState state;
 
     public LevelManager lvlManager;
-
     public CharacterStats charStats;
 
     CapsuleCollider2D capsuleColldier;
+    AudioSource pirateSource;
     Rigidbody2D rigibBodie;
     Animator animController;
 
     LayerMask obstacleMask;
+
+    public AudioClip jumpSoundClip;
 
     public bool isGrounded= false;
 
@@ -49,6 +51,7 @@ public class CharacterController : MonoBehaviour
         capsuleColldier = GetComponent<CapsuleCollider2D>();
         rigibBodie = GetComponent<Rigidbody2D>();
         animController = GetComponent<Animator>();
+        pirateSource = GetComponent<AudioSource>();
 
         charStats = GetComponent<CharacterStats>();
 
@@ -224,6 +227,7 @@ public class CharacterController : MonoBehaviour
                 rigibBodie.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 //rigibBodie.velocity = new Vector2(rigibBodie.velocity.x, jumpForce);
                 animController.SetBool("jumping", true);
+                PlayVFXSound(jumpSoundClip, 0.5f);
 
             }
         }
@@ -297,6 +301,17 @@ public class CharacterController : MonoBehaviour
         animController.SetBool("Dead", false);
         state = PirateState.Alive;
      
+    }
+
+
+
+
+
+
+    //Sonido
+    public void PlayVFXSound(AudioClip clip, float volume)
+    {
+        pirateSource.PlayOneShot(clip, volume);
     }
 
 }
