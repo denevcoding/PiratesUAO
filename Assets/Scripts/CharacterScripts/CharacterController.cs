@@ -14,6 +14,8 @@ public class CharacterController : MonoBehaviour
 
     public LevelManager lvlManager;
 
+    public CharacterStats charStats;
+
     CapsuleCollider2D capsuleColldier;
     Rigidbody2D rigibBodie;
     Animator animController;
@@ -47,6 +49,8 @@ public class CharacterController : MonoBehaviour
         capsuleColldier = GetComponent<CapsuleCollider2D>();
         rigibBodie = GetComponent<Rigidbody2D>();
         animController = GetComponent<Animator>();
+
+        charStats = GetComponent<CharacterStats>();
 
         obstacleMask = LayerMask.GetMask("Obstacle");
     }
@@ -265,18 +269,27 @@ public class CharacterController : MonoBehaviour
         }
     }
 
+    public void ReceiveDamage()
+    {
+        charStats.CalculateDamage();
+    }
 
     public void Dead()
     {
         state = PirateState.Dead;
         animController.SetBool("Dead", true);
-
-        Invoke("Respawn", 3f);
+        
     }
 
     public void Respawn()
     {
         lvlManager.Respawn();
+    }
+
+    public void DelayRespawn(float time)
+    {
+        Dead();
+        Invoke("Respawn", time);
     }
 
     public void Reborn()

@@ -22,7 +22,7 @@ public class PlataformaMuerte : MonoBehaviour
 
         if (player)
         {
-            player.Dead();
+            player.ReceiveDamage();
             //player.state = PirateState.Dead;
             Debug.Log(collision.gameObject.name);
             
