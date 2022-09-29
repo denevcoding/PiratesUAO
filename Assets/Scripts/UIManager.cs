@@ -33,7 +33,7 @@ public class UIManager : MonoBehaviour
         Invoke("ReloadScene", 3f);
     }
 
-    void ReloadScene()
+    public void ReloadScene()
     {
         SceneManager.LoadScene("Test level Santiago Backup", LoadSceneMode.Single);
     }

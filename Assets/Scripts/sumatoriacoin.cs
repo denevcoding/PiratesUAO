@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine
-using TMPro
+using UnityEngine;
+using TMPro;
 
 
-public class sumatoriacoin : MonoBehaviour
+public class SumatoriaCoin : MonoBehaviour
 {
 
     private float cantidadpuntos;
@@ -21,13 +21,15 @@ public class sumatoriacoin : MonoBehaviour
     {
         
     }
-    private void Ontriggerenter2D(collider2D other)
+    private void Ontriggerenter2D(Collider2D other)
     {
-        if (other.comparetag("playerprofesor"))
+        if (other.gameObject.CompareTag("playerprofesor"))
         {
-            puntaje.sumarpuntos(cantidadpuntos);
+            //puntaje.sumarpuntos(cantidadpuntos);
         }
     }
+
+
 
     
 }
