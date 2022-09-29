@@ -4977,6 +4977,7 @@ MonoBehaviour:
   lvlManager: {fileID: 0}
   charStats: {fileID: 0}
   jumpSoundClip: {fileID: 8300000, guid: c5c02ae23a9a8554b9a098b3a3785994, type: 3}
+  DeadSoundClip: {fileID: 8300000, guid: 0fa3376cece362e4493c05401efd5655, type: 3}
   isGrounded: 0
   jumpForce: 18
   coyoteTime: 0.1
